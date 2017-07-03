@@ -17,8 +17,8 @@ intLumi = 35863.308 # full 2016 data
 #intLumi = 7540.488 # 2016G 
 #intLumi = 8605.69  # 2016H 
 
-systematics_file = "DisplacedHiggs.Configuration.systematicsDefinitions"
-external_systematics_directory = "DisplacedHiggs/Configuration/data/"
+systematics_file = "OSUDisplacedHiggs.Configuration.systematicsDefinitions"
+external_systematics_directory = "OSUDisplacedHiggs/Configuration/data/"
 
 # create list of datasets to process
 

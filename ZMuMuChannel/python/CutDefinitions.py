@@ -2,7 +2,7 @@ import FWCore.ParameterSet.Config as cms
 import copy
 import string
 
-import DisplacedSUSY.Configuration.objectDefinitions as objectDefs
+import OSUDisplacedHiggs.Configuration.objectDefinitions as objectDefs
 
 ##########################################################################
 
@@ -19,6 +19,13 @@ jet_pt_30_cut = cms.PSet(
     cutString = cms.string("pt > 30"),
     numberRequired = cms.string(">= 0")
     )
+
+jet_pt_20_cut = cms.PSet(
+    inputCollection = cms.vstring("jets"),
+    cutString = cms.string("pt > 20"),
+    numberRequired = cms.string(">= 0")
+    )
+
 
 jet_id_cut = cms.PSet(
     inputCollection = cms.vstring("jets"),
@@ -55,6 +62,12 @@ muon_eta_cut = cms.PSet(
 muon_pt_20_cut = cms.PSet(
     inputCollection = cms.vstring("muons"),
     cutString = cms.string("pt > 20"),
+    numberRequired = cms.string(">= 2")
+    )
+
+muon_pt_30_cut = cms.PSet(
+    inputCollection = cms.vstring("muons"),
+    cutString = cms.string("pt > 30"),
     numberRequired = cms.string(">= 2")
     )
 

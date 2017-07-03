@@ -10,11 +10,19 @@ config_file = "ZControlRegion_cfg.py"
 # choose luminosity used for MC normalization
 intLumi = 35863.308
 
-systematics_file = "DisplacedSUSY.Configuration.systematicsDefinitions"
-external_systematics_directory = "DisplacedSUSY/Configuration/data/"
+systematics_file = "OSUDisplacedHiggs.Configuration.systematicsDefinitions"
+external_systematics_directory = "OSUDisplacedHiggs/Configuration/data/"
 
 # create list of datasets to process
 datasets = [
+
+    'ggZH_HSSbbbb_MS_40_ctauS_0',
+    'ggZH_HSSbbbb_MS_40_ctauS_0p05',
+    'ggZH_HSSbbbb_MS_40_ctauS_1',
+    'ggZH_HSSbbbb_MS_40_ctauS_10',
+    'ggZH_HSSbbbb_MS_40_ctauS_100',
+    'ggZH_HSSbbbb_MS_40_ctauS_1000',
+    'ggZH_HSSbbbb_MS_40_ctauS_10000',
 
     # DY
     'DYJetsToLL',

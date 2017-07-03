@@ -87,7 +87,7 @@ scalingfactorproducers = []
 ##### Import the channels to be run ############################################
 ################################################################################
 
-from DisplacedHiggs.BasicSelections.Selections import *
+from OSUDisplacedHiggs.BasicSelections.Selections import *
 
 eventSelections = [FSUcut]
 
@@ -98,7 +98,7 @@ eventSelections = [FSUcut]
 from OSUT3Analysis.Configuration.histogramDefinitions import MuonHistograms, DiMuonHistograms
 from OSUT3Analysis.Configuration.histogramDefinitions import JetHistograms, MuonJetHistograms
 from OSUT3Analysis.Configuration.histogramDefinitions import MetHistograms, MuonMetHistograms
-from DisplacedHiggs.Configuration.histogramDefinitions import jetHistograms
+from OSUDisplacedHiggs.Configuration.histogramDefinitions import jetHistograms
 
 
 histograms = cms.VPSet()

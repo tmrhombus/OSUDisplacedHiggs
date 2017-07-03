@@ -2,7 +2,7 @@ import FWCore.ParameterSet.Config as cms
 import copy
 import string
 
-import DisplacedHiggs.Configuration.objectDefinitions as objectDefs
+import OSUDisplacedHiggs.Configuration.objectDefinitions as objectDefs
 
 ##########################################################################
 ### Set up various LLP (Z->ll)H -> aa -> bbbb control regions

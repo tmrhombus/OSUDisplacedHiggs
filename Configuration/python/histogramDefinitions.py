@@ -2,7 +2,7 @@ import FWCore.ParameterSet.Config as cms
 
 
 # import definitions of d0/dz
-from DisplacedHiggs.Configuration.objectDefinitions import *
+from OSUDisplacedHiggs.Configuration.objectDefinitions import *
 
 
 ###############################################
@@ -317,225 +317,225 @@ from DisplacedHiggs.Configuration.objectDefinitions import *
 #)
 
 
-#MuonD0Histograms = cms.PSet(
-#    inputCollection = cms.vstring("muons","beamspots"),
-#    histograms = cms.VPSet (
+MuonD0Histograms = cms.PSet(
+    inputCollection = cms.vstring("muons","beamspots"),
+    histograms = cms.VPSet (
 
         ###################################################################
         # track d0 error histogram
-#        cms.PSet (
-#            name = cms.string("muonTrackD0Error"),
-#             title = cms.string("Muon track #sigma(d_{0});muon track #sigma(d_{0}) [#mum]"),
-#            binsX = cms.untracked.vdouble(100, 0, 500),
-#            inputVariables = cms.vstring("10000*muon.innerTrack.d0Error"),
-#        ),
+        cms.PSet (
+            name = cms.string("muonTrackD0Error"),
+             title = cms.string("Muon track #sigma(d_{0});muon track #sigma(d_{0}) [#mum]"),
+            binsX = cms.untracked.vdouble(100, 0, 500),
+            inputVariables = cms.vstring("10000*muon.innerTrack.d0Error"),
+        ),
 
         ###################################################################
         # d0 histograms
-#        cms.PSet (
-#            name = cms.string("muonD0_100um"),
-#             title = cms.string("Muon d_{0};muon d_{0} [#mum]"),
-#            binsX = cms.untracked.vdouble(100, -100, 100),
-#            inputVariables = cms.vstring(muonD0_um),
-#        ),
-#        cms.PSet (
-#            name = cms.string("muonD0_200um"),
-#             title = cms.string("Muon d_{0};muon d_{0} [#mum]"),
-#            binsX = cms.untracked.vdouble(100, -200, 200),
-#            inputVariables = cms.vstring(muonD0_um),
-#        ),
-#        cms.PSet (
-#            name = cms.string("muonD0_500um"),
-#             title = cms.string("Muon d_{0};muon d_{0} [#mum]"),
-#            binsX = cms.untracked.vdouble(100, -500, 500),
-#            inputVariables = cms.vstring(muonD0_um),
-#        ),
-#        cms.PSet (
-#            name = cms.string("muonD0_5mm"),
-#            title = cms.string("Muon d_{0};muon d_{0} [#mum]"),
-#            binsX = cms.untracked.vdouble(100, -5000, 5000),
-#            inputVariables = cms.vstring(muonD0_um),
-#        ),
-#        cms.PSet (
-#            name = cms.string("muonD0_5cm"),
-#            title = cms.string("Muon d_{0};muon d_{0} [cm]"),
-#            binsX = cms.untracked.vdouble(100, -5, 5),
-#            inputVariables = cms.vstring(muonD0_cm),
-#        ),
-#        cms.PSet (
-#            name = cms.string("muonD0_10cm"),
-#            title = cms.string("Muon d_{0};muon d_{0} [cm]"),
-#            binsX = cms.untracked.vdouble(100, -10, 10),
-#            inputVariables = cms.vstring(muonD0_cm),
-#        ),
-#        cms.PSet (
-#            name = cms.string("muonD0_20cm"),
-#            title = cms.string("Muon d_{0};muon d_{0} [cm]"),
-#            binsX = cms.untracked.vdouble(100, -20, 20),
-#            inputVariables = cms.vstring(muonD0_cm),
-#        ),
+        cms.PSet (
+            name = cms.string("muonD0_100um"),
+             title = cms.string("Muon d_{0};muon d_{0} [#mum]"),
+            binsX = cms.untracked.vdouble(100, -100, 100),
+            inputVariables = cms.vstring(muonD0_um),
+        ),
+        cms.PSet (
+            name = cms.string("muonD0_200um"),
+             title = cms.string("Muon d_{0};muon d_{0} [#mum]"),
+            binsX = cms.untracked.vdouble(100, -200, 200),
+            inputVariables = cms.vstring(muonD0_um),
+        ),
+        cms.PSet (
+            name = cms.string("muonD0_500um"),
+             title = cms.string("Muon d_{0};muon d_{0} [#mum]"),
+            binsX = cms.untracked.vdouble(100, -500, 500),
+            inputVariables = cms.vstring(muonD0_um),
+        ),
+        cms.PSet (
+            name = cms.string("muonD0_5mm"),
+            title = cms.string("Muon d_{0};muon d_{0} [#mum]"),
+            binsX = cms.untracked.vdouble(100, -5000, 5000),
+            inputVariables = cms.vstring(muonD0_um),
+        ),
+        cms.PSet (
+            name = cms.string("muonD0_5cm"),
+            title = cms.string("Muon d_{0};muon d_{0} [cm]"),
+            binsX = cms.untracked.vdouble(100, -5, 5),
+            inputVariables = cms.vstring(muonD0_cm),
+        ),
+        cms.PSet (
+            name = cms.string("muonD0_10cm"),
+            title = cms.string("Muon d_{0};muon d_{0} [cm]"),
+            binsX = cms.untracked.vdouble(100, -10, 10),
+            inputVariables = cms.vstring(muonD0_cm),
+        ),
+        cms.PSet (
+            name = cms.string("muonD0_20cm"),
+            title = cms.string("Muon d_{0};muon d_{0} [cm]"),
+            binsX = cms.untracked.vdouble(100, -20, 20),
+            inputVariables = cms.vstring(muonD0_cm),
+        ),
 
         ###################################################################
         # abs(d0) histograms
-#        cms.PSet (
-#            name = cms.string("muonAbsD0_100um"),
-#             title = cms.string("Muon |d_{0}|;muon |d_{0}| [#mum]"),
-#            binsX = cms.untracked.vdouble(100, 0, 100),
-#            inputVariables = cms.vstring(muonAbsD0_um),
-#        ),
-#        cms.PSet (
-#            name = cms.string("muonAbsD0_200um"),
-#             title = cms.string("Muon |d_{0}|;muon |d_{0}| [#mum]"),
-#            binsX = cms.untracked.vdouble(100, 0, 200),
-#            inputVariables = cms.vstring(muonAbsD0_um),
-#        ),
-#        cms.PSet (
-#            name = cms.string("muonAbsD0_500um"),
-#             title = cms.string("Muon |d_{0}|;muon |d_{0}| [#mum]"),
-#            binsX = cms.untracked.vdouble(100, 0, 500),
-#            inputVariables = cms.vstring(muonAbsD0_um),
-#        ),
-#        cms.PSet (
-#            name = cms.string("muonAbsD0_5mm"),
-#            title = cms.string("Muon |d_{0}|;muon |d_{0}| [#mum]"),
-#            binsX = cms.untracked.vdouble(100, 0, 5000),
-#            inputVariables = cms.vstring(muonAbsD0_um),
-#        ),
-#        cms.PSet (
-#            name = cms.string("muonAbsD0_5cm"),
-#            title = cms.string("Muon |d_{0}|;muon |d_{0}| [cm]"),
-#            binsX = cms.untracked.vdouble(100, 0, 5),
-#            inputVariables = cms.vstring(muonAbsD0_cm),
-#        ),
-#        cms.PSet (
-#            name = cms.string("muonAbsD0_10cm"),
-#            title = cms.string("Muon |d_{0}|;muon |d_{0}| [cm]"),
-#            binsX = cms.untracked.vdouble(100, 0, 10),
-#            inputVariables = cms.vstring(muonAbsD0_cm),
-#        ),
-#        cms.PSet (
-#            name = cms.string("muonAbsD0_20cm"),
-#            title = cms.string("Muon |d_{0}|;muon |d_{0}| [cm]"),
-#            binsX = cms.untracked.vdouble(100, 0, 20),
-#            inputVariables = cms.vstring(muonAbsD0_cm),
-#        ),
+        cms.PSet (
+            name = cms.string("muonAbsD0_100um"),
+             title = cms.string("Muon |d_{0}|;muon |d_{0}| [#mum]"),
+            binsX = cms.untracked.vdouble(100, 0, 100),
+            inputVariables = cms.vstring(muonAbsD0_um),
+        ),
+        cms.PSet (
+            name = cms.string("muonAbsD0_200um"),
+             title = cms.string("Muon |d_{0}|;muon |d_{0}| [#mum]"),
+            binsX = cms.untracked.vdouble(100, 0, 200),
+            inputVariables = cms.vstring(muonAbsD0_um),
+        ),
+        cms.PSet (
+            name = cms.string("muonAbsD0_500um"),
+             title = cms.string("Muon |d_{0}|;muon |d_{0}| [#mum]"),
+            binsX = cms.untracked.vdouble(100, 0, 500),
+            inputVariables = cms.vstring(muonAbsD0_um),
+        ),
+        cms.PSet (
+            name = cms.string("muonAbsD0_5mm"),
+            title = cms.string("Muon |d_{0}|;muon |d_{0}| [#mum]"),
+            binsX = cms.untracked.vdouble(100, 0, 5000),
+            inputVariables = cms.vstring(muonAbsD0_um),
+        ),
+        cms.PSet (
+            name = cms.string("muonAbsD0_5cm"),
+            title = cms.string("Muon |d_{0}|;muon |d_{0}| [cm]"),
+            binsX = cms.untracked.vdouble(100, 0, 5),
+            inputVariables = cms.vstring(muonAbsD0_cm),
+        ),
+        cms.PSet (
+            name = cms.string("muonAbsD0_10cm"),
+            title = cms.string("Muon |d_{0}|;muon |d_{0}| [cm]"),
+            binsX = cms.untracked.vdouble(100, 0, 10),
+            inputVariables = cms.vstring(muonAbsD0_cm),
+        ),
+        cms.PSet (
+            name = cms.string("muonAbsD0_20cm"),
+            title = cms.string("Muon |d_{0}|;muon |d_{0}| [cm]"),
+            binsX = cms.untracked.vdouble(100, 0, 20),
+            inputVariables = cms.vstring(muonAbsD0_cm),
+        ),
 
         ###################################################################
         # sig(d0) histograms
-#        cms.PSet (
-#            name = cms.string("muonD0Sig_5"),
-#            title = cms.string("Muon d_{0}/#sigma(d_{0});muon d_{0}/#sigma(d_{0})"),
-#            binsX = cms.untracked.vdouble(100, -5, 5),
-#            inputVariables = cms.vstring(muonD0Sig),
-#        ),
-#        cms.PSet (
-#            name = cms.string("muonD0Sig_10"),
-#            title = cms.string("Muon d_{0}/#sigma(d_{0});muon d_{0}/#sigma(d_{0})"),
-#            binsX = cms.untracked.vdouble(100, -10, 10),
-#            inputVariables = cms.vstring(muonD0Sig),
-#        ),
-#        cms.PSet (
-#            name = cms.string("muonD0Sig_20"),
-#            title = cms.string("Muon d_{0}/#sigma(d_{0});muon d_{0}/#sigma(d_{0})"),
-#            binsX = cms.untracked.vdouble(100, -20, 20),
-#            inputVariables = cms.vstring(muonD0Sig),
-#        ),
-#        cms.PSet (
-#            name = cms.string("muonD0Sig_50"),
-#            title = cms.string("Muon d_{0}/#sigma(d_{0});muon d_{0}/#sigma(d_{0})"),
-#            binsX = cms.untracked.vdouble(100, -50, 50),
-#            inputVariables = cms.vstring(muonD0Sig),
-#        ),
-#        cms.PSet (
-#            name = cms.string("muonD0Sig_100"),
-#            title = cms.string("Muon d_{0}/#sigma(d_{0});muon d_{0}/#sigma(d_{0})"),
-#            binsX = cms.untracked.vdouble(100, -100, 100),
-#            inputVariables = cms.vstring(muonD0Sig),
-#        ),
-#        cms.PSet (
-#            name = cms.string("muonD0Sig_200"),
-#            title = cms.string("Muon d_{0}/#sigma(d_{0});muon d_{0}/#sigma(d_{0})"),
-#            binsX = cms.untracked.vdouble(100, -200, 200),
-#            inputVariables = cms.vstring(muonD0Sig),
-#        ),
-#        cms.PSet (
-#            name = cms.string("muonD0Sig_500"),
-#            title = cms.string("Muon d_{0}/#sigma(d_{0});muon d_{0}/#sigma(d_{0})"),
-#            binsX = cms.untracked.vdouble(100, -500, 500),
-#            inputVariables = cms.vstring(muonD0Sig),
-#        ),
+        cms.PSet (
+            name = cms.string("muonD0Sig_5"),
+            title = cms.string("Muon d_{0}/#sigma(d_{0});muon d_{0}/#sigma(d_{0})"),
+            binsX = cms.untracked.vdouble(100, -5, 5),
+            inputVariables = cms.vstring(muonD0Sig),
+        ),
+        cms.PSet (
+            name = cms.string("muonD0Sig_10"),
+            title = cms.string("Muon d_{0}/#sigma(d_{0});muon d_{0}/#sigma(d_{0})"),
+            binsX = cms.untracked.vdouble(100, -10, 10),
+            inputVariables = cms.vstring(muonD0Sig),
+        ),
+        cms.PSet (
+            name = cms.string("muonD0Sig_20"),
+            title = cms.string("Muon d_{0}/#sigma(d_{0});muon d_{0}/#sigma(d_{0})"),
+            binsX = cms.untracked.vdouble(100, -20, 20),
+            inputVariables = cms.vstring(muonD0Sig),
+        ),
+        cms.PSet (
+            name = cms.string("muonD0Sig_50"),
+            title = cms.string("Muon d_{0}/#sigma(d_{0});muon d_{0}/#sigma(d_{0})"),
+            binsX = cms.untracked.vdouble(100, -50, 50),
+            inputVariables = cms.vstring(muonD0Sig),
+        ),
+        cms.PSet (
+            name = cms.string("muonD0Sig_100"),
+            title = cms.string("Muon d_{0}/#sigma(d_{0});muon d_{0}/#sigma(d_{0})"),
+            binsX = cms.untracked.vdouble(100, -100, 100),
+            inputVariables = cms.vstring(muonD0Sig),
+        ),
+        cms.PSet (
+            name = cms.string("muonD0Sig_200"),
+            title = cms.string("Muon d_{0}/#sigma(d_{0});muon d_{0}/#sigma(d_{0})"),
+            binsX = cms.untracked.vdouble(100, -200, 200),
+            inputVariables = cms.vstring(muonD0Sig),
+        ),
+        cms.PSet (
+            name = cms.string("muonD0Sig_500"),
+            title = cms.string("Muon d_{0}/#sigma(d_{0});muon d_{0}/#sigma(d_{0})"),
+            binsX = cms.untracked.vdouble(100, -500, 500),
+            inputVariables = cms.vstring(muonD0Sig),
+        ),
 
         ###################################################################
         # abs(sig(d0)) histograms
-#        cms.PSet (
-#            name = cms.string("muonAbsD0Sig_5"),
-#            title = cms.string("Muon |d_{0}/#sigma(d_{0})|;muon |d_{0}/#sigma(d_{0})|"),
-#            binsX = cms.untracked.vdouble(100, 0, 5),
-#            inputVariables = cms.vstring(muonAbsD0Sig),
-#        ),
-#        cms.PSet (
-#            name = cms.string("muonAbsD0Sig_10"),
-#            title = cms.string("Muon |d_{0}/#sigma(d_{0})|;muon |d_{0}/#sigma(d_{0})|"),
-#            binsX = cms.untracked.vdouble(100, 0, 10),
-#            inputVariables = cms.vstring(muonAbsD0Sig),
-#        ),
-#        cms.PSet (
-#            name = cms.string("muonAbsD0Sig_20"),
-#            title = cms.string("Muon |d_{0}/#sigma(d_{0})|;muon |d_{0}/#sigma(d_{0})|"),
-#            binsX = cms.untracked.vdouble(100, 0, 20),
-#            inputVariables = cms.vstring(muonAbsD0Sig),
-#        ),
-#        cms.PSet (
-#            name = cms.string("muonAbsD0Sig_50"),
-#            title = cms.string("Muon |d_{0}/#sigma(d_{0})|;muon |d_{0}/#sigma(d_{0})|"),
-#            binsX = cms.untracked.vdouble(100, 0, 50),
-#            inputVariables = cms.vstring(muonAbsD0Sig),
-#        ),
-#        cms.PSet (
-#            name = cms.string("muonAbsD0Sig_100"),
-#            title = cms.string("Muon |d_{0}/#sigma(d_{0})|;muon |d_{0}/#sigma(d_{0})|"),
-#            binsX = cms.untracked.vdouble(100, 0, 100),
-#            inputVariables = cms.vstring(muonAbsD0Sig),
-#        ),
-#        cms.PSet (
-#            name = cms.string("muonAbsD0Sig_200"),
-#            title = cms.string("Muon |d_{0}/#sigma(d_{0})|;muon |d_{0}/#sigma(d_{0})|"),
-#            binsX = cms.untracked.vdouble(100, 0, 200),
-#            inputVariables = cms.vstring(muonAbsD0Sig),
-#        ),
-#        cms.PSet (
-#            name = cms.string("muonAbsD0Sig_500"),
-#            title = cms.string("Muon |d_{0}/#sigma(d_{0})|;muon |d_{0}/#sigma(d_{0})|"),
-#            binsX = cms.untracked.vdouble(100, 0, 500),
-#            inputVariables = cms.vstring(muonAbsD0Sig),
-#        ),
+        cms.PSet (
+            name = cms.string("muonAbsD0Sig_5"),
+            title = cms.string("Muon |d_{0}/#sigma(d_{0})|;muon |d_{0}/#sigma(d_{0})|"),
+            binsX = cms.untracked.vdouble(100, 0, 5),
+            inputVariables = cms.vstring(muonAbsD0Sig),
+        ),
+        cms.PSet (
+            name = cms.string("muonAbsD0Sig_10"),
+            title = cms.string("Muon |d_{0}/#sigma(d_{0})|;muon |d_{0}/#sigma(d_{0})|"),
+            binsX = cms.untracked.vdouble(100, 0, 10),
+            inputVariables = cms.vstring(muonAbsD0Sig),
+        ),
+        cms.PSet (
+            name = cms.string("muonAbsD0Sig_20"),
+            title = cms.string("Muon |d_{0}/#sigma(d_{0})|;muon |d_{0}/#sigma(d_{0})|"),
+            binsX = cms.untracked.vdouble(100, 0, 20),
+            inputVariables = cms.vstring(muonAbsD0Sig),
+        ),
+        cms.PSet (
+            name = cms.string("muonAbsD0Sig_50"),
+            title = cms.string("Muon |d_{0}/#sigma(d_{0})|;muon |d_{0}/#sigma(d_{0})|"),
+            binsX = cms.untracked.vdouble(100, 0, 50),
+            inputVariables = cms.vstring(muonAbsD0Sig),
+        ),
+        cms.PSet (
+            name = cms.string("muonAbsD0Sig_100"),
+            title = cms.string("Muon |d_{0}/#sigma(d_{0})|;muon |d_{0}/#sigma(d_{0})|"),
+            binsX = cms.untracked.vdouble(100, 0, 100),
+            inputVariables = cms.vstring(muonAbsD0Sig),
+        ),
+        cms.PSet (
+            name = cms.string("muonAbsD0Sig_200"),
+            title = cms.string("Muon |d_{0}/#sigma(d_{0})|;muon |d_{0}/#sigma(d_{0})|"),
+            binsX = cms.untracked.vdouble(100, 0, 200),
+            inputVariables = cms.vstring(muonAbsD0Sig),
+        ),
+        cms.PSet (
+            name = cms.string("muonAbsD0Sig_500"),
+            title = cms.string("Muon |d_{0}/#sigma(d_{0})|;muon |d_{0}/#sigma(d_{0})|"),
+            binsX = cms.untracked.vdouble(100, 0, 500),
+            inputVariables = cms.vstring(muonAbsD0Sig),
+        ),
 
         ###################################################################
         # 2D abs(d0) vs. abs(sig(d0))
-#        cms.PSet (
-#            name = cms.string("muonAbsD0_500um_vs_MuonAbsD0Sig_50"),
-#            title = cms.string("Muon |d_{0}| vs. Muon |d_{0}/#sigma(d_{0})|;muon |d_{0}/#sigma(d_{0})|;muon |d_{0}| [#mum]"),
-#            binsX = cms.untracked.vdouble(100, 0, 50),
-#            binsY = cms.untracked.vdouble(100, 0, 500),
-#            inputVariables = cms.vstring(muonAbsD0Sig, muonAbsD0_um),
-#        ),
-#        cms.PSet (
-#            name = cms.string("muonAbsD0_5mm_vs_MuonAbsD0Sig_500"),
-#            title = cms.string("Muon |d_{0}| vs. Muon |d_{0}/#sigma(d_{0})|;muon |d_{0}/#sigma(d_{0})|;muon |d_{0}| [#mum]"),
-#            binsX = cms.untracked.vdouble(100, 0, 500),
-#            binsY = cms.untracked.vdouble(100, 0, 5000),
-#            inputVariables = cms.vstring(muonAbsD0Sig, muonAbsD0_um),
-#        ),
+        cms.PSet (
+            name = cms.string("muonAbsD0_500um_vs_MuonAbsD0Sig_50"),
+            title = cms.string("Muon |d_{0}| vs. Muon |d_{0}/#sigma(d_{0})|;muon |d_{0}/#sigma(d_{0})|;muon |d_{0}| [#mum]"),
+            binsX = cms.untracked.vdouble(100, 0, 50),
+            binsY = cms.untracked.vdouble(100, 0, 500),
+            inputVariables = cms.vstring(muonAbsD0Sig, muonAbsD0_um),
+        ),
+        cms.PSet (
+            name = cms.string("muonAbsD0_5mm_vs_MuonAbsD0Sig_500"),
+            title = cms.string("Muon |d_{0}| vs. Muon |d_{0}/#sigma(d_{0})|;muon |d_{0}/#sigma(d_{0})|;muon |d_{0}| [#mum]"),
+            binsX = cms.untracked.vdouble(100, 0, 500),
+            binsY = cms.untracked.vdouble(100, 0, 5000),
+            inputVariables = cms.vstring(muonAbsD0Sig, muonAbsD0_um),
+        ),
 
         ###################################################################
         # 2D abs(d0) vs. d0 error
-#        cms.PSet (
-#            name = cms.string("muonAbsD0_500um_vs_MuonTrackD0Error_500"),
-#            title = cms.string("Muon |d_{0}| vs. Muon #sigma(d_{0});muon #sigma(d_{0}) [#mum];muon |d_{0}| [#mum]"),
-#            binsX = cms.untracked.vdouble(100, 0, 500),
-#            binsY = cms.untracked.vdouble(100, 0, 500),
-#            inputVariables = cms.vstring("10000*muon.innerTrack.d0Error", muonAbsD0_um),
-#        ),
+        cms.PSet (
+            name = cms.string("muonAbsD0_500um_vs_MuonTrackD0Error_500"),
+            title = cms.string("Muon |d_{0}| vs. Muon #sigma(d_{0});muon #sigma(d_{0}) [#mum];muon |d_{0}| [#mum]"),
+            binsX = cms.untracked.vdouble(100, 0, 500),
+            binsY = cms.untracked.vdouble(100, 0, 500),
+            inputVariables = cms.vstring("10000*muon.innerTrack.d0Error", muonAbsD0_um),
+        ),
 
         ###################################################################
         # 2D d0 vs. pt
@@ -618,8 +618,8 @@ from DisplacedHiggs.Configuration.objectDefinitions import *
 #            binsY = cms.untracked.vdouble(100, 0, 500),
 #            inputVariables = cms.vstring("muon.phi", "10000*muon.innerTrack.d0Error"),
 #        ),
-#    )
-#)
+    )
+)
 
 
 #ElectronMuonD0Histograms = cms.PSet(
@@ -763,93 +763,93 @@ jetHistograms = cms.PSet(
 )
 
 
-#eventHistograms = cms.PSet(
-#    inputCollection = cms.vstring("eventvariables"),
-#    histograms = cms.VPSet (
-#        cms.PSet (
-#            name = cms.string("numPV"),
-#            title = cms.string("Number of Primary Vertex; #PV"),
-#            binsX = cms.untracked.vdouble(75, 0, 75),
-#            inputVariables = cms.vstring("numPV"),
-#        ),
-#        cms.PSet (
-#            name = cms.string("numTruePV"),
-#            title = cms.string("Number of True PVs; #True PVs"),
-#            binsX = cms.untracked.vdouble(75, 0, 75),
-#            inputVariables = cms.vstring("numTruePV"),
-#        ),
-#        cms.PSet (
-#            name = cms.string("puScalingFactor"),
-#            title = cms.string("PU Scaling Factor; log(PU Scaling Factor)"),
-#            binsX = cms.untracked.vdouble(200, -4, 4),
-#            inputVariables = cms.vstring("log10(puScalingFactor)"),
-#        ),
-#        cms.PSet (
-#            name = cms.string("sumJetPt"),
-#            title = cms.string("Sum of Jet Transverse Momentum; #Sigma p_{T}_{jet}"),
-#            binsX = cms.untracked.vdouble(100, 0, 500),
-#            inputVariables = cms.vstring("sumJetPt"),
-#        ),
-#        cms.PSet (
-#            name = cms.string("passTrigger"),
-#            title = cms.string("Pass Trigger; Trigger Flag"),
-#            binsX = cms.untracked.vdouble(4, -2, 2),
-#            inputVariables = cms.vstring("passTrigger"),
-#        ),
-#        cms.PSet (
-#            name = cms.string("triggerScalingFactor"),
-#            title = cms.string("Trigger Scaling Factor; Trigger Scaling Factor"),
-#            binsX = cms.untracked.vdouble(10, 0, 1),
-#            inputVariables = cms.vstring("triggerScalingFactor"),
-#        ),
-#        cms.PSet (
-#            name = cms.string("electronReco2016"),
-#            title = cms.string("Electron Reco SF; Electron Reco SF"),
-#            binsX = cms.untracked.vdouble(100, 0.5, 1.5),
-#            inputVariables = cms.vstring("electronReco2016"),
-#        ),
-#        cms.PSet (
-#            name = cms.string("electronID2016Tight"),
-#            title = cms.string("Electron ID SF; Electron ID SF"),
-#            binsX = cms.untracked.vdouble(100, 0.5, 1.5),
-#            inputVariables = cms.vstring("electronID2016Tight"),
-#        ),
-#        cms.PSet (
-#            name = cms.string("muonReco2016"),
-#            title = cms.string("Muon Reco SF; Muon Reco SF"),
-#            binsX = cms.untracked.vdouble(100, 0.5, 1.5),
-#            inputVariables = cms.vstring("muonReco2016"),
-#        ),
-#        cms.PSet (
-#            name = cms.string("muonID2016Tight"),
-#            title = cms.string("Muon ID SF; Muon ID SF"),
-#            binsX = cms.untracked.vdouble(100, 0.5, 1.5),
-#            inputVariables = cms.vstring("muonID2016Tight"),
-#        ),
-#        cms.PSet (
-#            name = cms.string("muonIso2016Tight"),
-#            title = cms.string("Muon Iso SF; Muon Iso SF"),
-#            binsX = cms.untracked.vdouble(100, 0.5, 1.5),
-#            inputVariables = cms.vstring("muonIso2016Tight"),
-#        ),
-#        cms.PSet (
-#            name = cms.string("lifetimeWeight"),
-#            title = cms.string("Lifetime Scaling Factor; Lifetime Scaling Factor"),
-#            binsX = cms.untracked.vdouble(200, -4, 4),
-#            inputVariables = cms.vstring("log10(lifetimeWeight)"),
-#        ),
-#        cms.PSet (
-#            name = cms.string("ctauStop0_100um"),
-#            title = cms.string("Stop 0 c#tau;c#tau [cm]"),
-#            binsX = cms.untracked.vdouble(100, 0, 0.01),
-#            inputVariables = cms.vstring("cTau_1000006_0"),
-#            ),
-#        cms.PSet (
-#            name = cms.string("ctauStop1_100um"),
-#            title = cms.string("Stop 1 c#tau;c#tau [cm]"),
-#            binsX = cms.untracked.vdouble(100, 0, 0.01),
-#            inputVariables = cms.vstring("cTau_1000006_1"),
-#        ),
+eventHistograms = cms.PSet(
+    inputCollection = cms.vstring("eventvariables"),
+    histograms = cms.VPSet (
+        cms.PSet (
+            name = cms.string("numPV"),
+            title = cms.string("Number of Primary Vertex; #PV"),
+            binsX = cms.untracked.vdouble(75, 0, 75),
+            inputVariables = cms.vstring("numPV"),
+        ),
+        cms.PSet (
+            name = cms.string("numTruePV"),
+            title = cms.string("Number of True PVs; #True PVs"),
+            binsX = cms.untracked.vdouble(75, 0, 75),
+            inputVariables = cms.vstring("numTruePV"),
+        ),
+        cms.PSet (
+            name = cms.string("puScalingFactor"),
+            title = cms.string("PU Scaling Factor; log(PU Scaling Factor)"),
+            binsX = cms.untracked.vdouble(200, -4, 4),
+            inputVariables = cms.vstring("log10(puScalingFactor)"),
+        ),
+        cms.PSet (
+            name = cms.string("sumJetPt"),
+            title = cms.string("Sum of Jet Transverse Momentum; #Sigma p_{T}_{jet}"),
+            binsX = cms.untracked.vdouble(100, 0, 500),
+            inputVariables = cms.vstring("sumJetPt"),
+        ),
+        cms.PSet (
+            name = cms.string("passTrigger"),
+            title = cms.string("Pass Trigger; Trigger Flag"),
+            binsX = cms.untracked.vdouble(4, -2, 2),
+            inputVariables = cms.vstring("passTrigger"),
+        ),
+        cms.PSet (
+            name = cms.string("triggerScalingFactor"),
+            title = cms.string("Trigger Scaling Factor; Trigger Scaling Factor"),
+            binsX = cms.untracked.vdouble(10, 0, 1),
+            inputVariables = cms.vstring("triggerScalingFactor"),
+        ),
+        cms.PSet (
+            name = cms.string("electronReco2016"),
+            title = cms.string("Electron Reco SF; Electron Reco SF"),
+            binsX = cms.untracked.vdouble(100, 0.5, 1.5),
+            inputVariables = cms.vstring("electronReco2016"),
+        ),
+        cms.PSet (
+            name = cms.string("electronID2016Tight"),
+            title = cms.string("Electron ID SF; Electron ID SF"),
+            binsX = cms.untracked.vdouble(100, 0.5, 1.5),
+            inputVariables = cms.vstring("electronID2016Tight"),
+        ),
+        cms.PSet (
+            name = cms.string("muonReco2016"),
+            title = cms.string("Muon Reco SF; Muon Reco SF"),
+            binsX = cms.untracked.vdouble(100, 0.5, 1.5),
+            inputVariables = cms.vstring("muonReco2016"),
+        ),
+        cms.PSet (
+            name = cms.string("muonID2016Tight"),
+            title = cms.string("Muon ID SF; Muon ID SF"),
+            binsX = cms.untracked.vdouble(100, 0.5, 1.5),
+            inputVariables = cms.vstring("muonID2016Tight"),
+        ),
+        cms.PSet (
+            name = cms.string("muonIso2016Tight"),
+            title = cms.string("Muon Iso SF; Muon Iso SF"),
+            binsX = cms.untracked.vdouble(100, 0.5, 1.5),
+            inputVariables = cms.vstring("muonIso2016Tight"),
+        ),
+        cms.PSet (
+            name = cms.string("lifetimeWeight"),
+            title = cms.string("Lifetime Scaling Factor; Lifetime Scaling Factor"),
+            binsX = cms.untracked.vdouble(200, -4, 4),
+            inputVariables = cms.vstring("log10(lifetimeWeight)"),
+        ),
+        cms.PSet (
+            name = cms.string("ctauStop0_100um"),
+            title = cms.string("Stop 0 c#tau;c#tau [cm]"),
+            binsX = cms.untracked.vdouble(100, 0, 0.01),
+            inputVariables = cms.vstring("cTau_1000006_0"),
+            ),
+        cms.PSet (
+            name = cms.string("ctauStop1_100um"),
+            title = cms.string("Stop 1 c#tau;c#tau [cm]"),
+            binsX = cms.untracked.vdouble(100, 0, 0.01),
+            inputVariables = cms.vstring("cTau_1000006_1"),
+        ),
 #        cms.PSet (
 #            name = cms.string("ctauStop0_1mm"),
 #            title = cms.string("Stop 0 c#tau;c#tau [cm]"),
@@ -898,5 +898,5 @@ jetHistograms = cms.PSet(
 #            binsX = cms.untracked.vdouble(100, 0, 100),
 #            inputVariables = cms.vstring("cTau_1000006_1"),
 #        ),
-#    )
-#)
+    )
+)
