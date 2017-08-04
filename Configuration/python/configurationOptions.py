@@ -9,6 +9,14 @@ datasets = [
 
    #data
 
+   'ggZH_HSSbbbb_MS_40_ctauS_0',
+   'ggZH_HSSbbbb_MS_40_ctauS_0p05',
+   'ggZH_HSSbbbb_MS_40_ctauS_1',
+   'ggZH_HSSbbbb_MS_40_ctauS_10',
+   'ggZH_HSSbbbb_MS_40_ctauS_100',
+   'ggZH_HSSbbbb_MS_40_ctauS_1000',
+   'ggZH_HSSbbbb_MS_40_ctauS_10000',
+
    'SingleMu_2016',
    'SingleMu_2016B',
    'SingleMu_2016C',
@@ -192,6 +200,14 @@ nJobs = {
     ############################################################################
     # set number of jobs to correpond to roughly 100k events/job
 
+    'ggZH_HSSbbbb_MS_40_ctauS_0'      :  999,
+    'ggZH_HSSbbbb_MS_40_ctauS_0p05'   :  999,
+    'ggZH_HSSbbbb_MS_40_ctauS_1'      :  999,
+    'ggZH_HSSbbbb_MS_40_ctauS_10'     :  999,
+    'ggZH_HSSbbbb_MS_40_ctauS_100'    :  999,
+    'ggZH_HSSbbbb_MS_40_ctauS_1000'   :  999,
+    'ggZH_HSSbbbb_MS_40_ctauS_10000'  :  999,
+
     #DY
     'DYJetsToLL_50'  :  630,
     'DYJetsToLL_10to50'    : 350,
@@ -313,6 +329,15 @@ maxEvents = {
     ############################################################################
     #MiniAOD stored on T3.
     ############################################################################
+
+    'ggZH_HSSbbbb_MS_40_ctauS_0'      :  -1,
+    'ggZH_HSSbbbb_MS_40_ctauS_0p05'   :  -1,
+    'ggZH_HSSbbbb_MS_40_ctauS_1'      :  -1,
+    'ggZH_HSSbbbb_MS_40_ctauS_10'     :  -1,
+    'ggZH_HSSbbbb_MS_40_ctauS_100'    :  -1,
+    'ggZH_HSSbbbb_MS_40_ctauS_1000'   :  -1,
+    'ggZH_HSSbbbb_MS_40_ctauS_10000'  :  -1,
+
     #DY
     'DYJetsToLL_50'  :  -1,
     'DYJetsToLL_10to50'        : -1,
@@ -443,6 +468,15 @@ types = {
     ############################################################################
     #MiniAOD stored on T3.
     ############################################################################
+
+    'ggZH_HSSbbbb_MS_40_ctauS_0'       :  "signalMC",
+    'ggZH_HSSbbbb_MS_40_ctauS_0p05'    :  "signalMC",
+    'ggZH_HSSbbbb_MS_40_ctauS_1'       :  "signalMC",
+    'ggZH_HSSbbbb_MS_40_ctauS_10'      :  "signalMC",
+    'ggZH_HSSbbbb_MS_40_ctauS_100'     :  "signalMC",
+    'ggZH_HSSbbbb_MS_40_ctauS_1000'    :  "signalMC",
+    'ggZH_HSSbbbb_MS_40_ctauS_10000'   :  "signalMC",
+
     #DY
     'DYJetsToLL'  :  "bgMC",
     'DYJetsToLL_50'  :  "bgMC",
@@ -579,6 +613,15 @@ colors = {
     ############################################################################
     #MiniAOD stored on T3.
     ############################################################################
+
+    'ggZH_HSSbbbb_MS_40_ctauS_0'       :  632,
+    'ggZH_HSSbbbb_MS_40_ctauS_0p05'    :  807,
+    'ggZH_HSSbbbb_MS_40_ctauS_1'       :  798,
+    'ggZH_HSSbbbb_MS_40_ctauS_10'      :  418,
+    'ggZH_HSSbbbb_MS_40_ctauS_100'     :  601,
+    'ggZH_HSSbbbb_MS_40_ctauS_1000'    :  599,
+    'ggZH_HSSbbbb_MS_40_ctauS_10000'   :  618,
+
     #DY
     'DYJetsToLL'          : 410,
     'DYJetsToLL_10to50'   : 409,
@@ -715,6 +758,15 @@ labels = {
     ############################################################################
     #MiniAOD stored on T3.
     ############################################################################
+
+    'ggZH_HSSbbbb_MS_40_ctauS_0'       :  "ZH #rightarrow SS #rightarrow 4b (40 GeV, 0 mm)",
+    'ggZH_HSSbbbb_MS_40_ctauS_0p05'    :  "ZH #rightarrow SS #rightarrow 4b (40 GeV, 0.05 mm)", 
+    'ggZH_HSSbbbb_MS_40_ctauS_1'       :  "ZH #rightarrow SS #rightarrow 4b (40 GeV, 1 mm)",
+    'ggZH_HSSbbbb_MS_40_ctauS_10'      :  "ZH #rightarrow SS #rightarrow 4b (40 GeV, 1 cm)",
+    'ggZH_HSSbbbb_MS_40_ctauS_100'     :  "ZH #rightarrow SS #rightarrow 4b (40 GeV, 10 cm)",
+    'ggZH_HSSbbbb_MS_40_ctauS_1000'    :  "ZH #rightarrow SS #rightarrow 4b (40 GeV, 1 m)",
+    'ggZH_HSSbbbb_MS_40_ctauS_10000'   :  "ZH #rightarrow SS #rightarrow 4b (40 GeV, 10 m)", 
+
     #DY
     'DYJetsToLL'     :  "Z#rightarrowl^{+}l^{-}",
     'DYJetsToLL_50'  :  "Z#rightarrowl^{+}l^{-} M(50+)",
@@ -849,6 +901,14 @@ labels = {
 crossSections = {
 
     # taken from here: https://twiki.cern.ch/twiki/bin/view/CMS/SummaryTable1G25ns
+
+    'ggZH_HSSbbbb_MS_40_ctauS_0'       :  1,
+    'ggZH_HSSbbbb_MS_40_ctauS_0p05'    :  1,
+    'ggZH_HSSbbbb_MS_40_ctauS_1'       :  1,
+    'ggZH_HSSbbbb_MS_40_ctauS_10'      :  1,
+    'ggZH_HSSbbbb_MS_40_ctauS_100'     :  1,
+    'ggZH_HSSbbbb_MS_40_ctauS_1000'    :  1,
+    'ggZH_HSSbbbb_MS_40_ctauS_10000'   :  1,
 
     'DYJetsToLL_10to50'        : 18610.0,
     'DYJetsToLL_50'            : 5765.4,
